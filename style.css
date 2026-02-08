@@ -14,7 +14,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    cursor: url('./images/cursor.gif'), auto;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .container {
