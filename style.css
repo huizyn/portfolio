@@ -14,12 +14,70 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
+    cursor: url('./images/cursor.gif'), auto;
 }
 
 .container {
     max-width: 1000px;
     width: 100%;
     overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    z-index: 10;
+}
+
+.navbar-content {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 30px;
+    cursor: pointer;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+    font-family: monospace;
+}
+
+.search-box:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+    font-family: monospace;
+}
+
+.search-btn {
+    padding: 6px 20px;
+    background: #ff69b4;
+    color: white;
+    border: 1px solid #ff1493;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: monospace;
 }
 
 .title {
@@ -31,6 +89,10 @@ body {
 .content {
     font-size: 1rem;
     color: #f0f0f0;
+}
+
+.content img {
+    vertical-align: middle;
 }
 
 .flex-row {
@@ -56,11 +118,9 @@ body {
 
 .card {
     background: transparent;
-    /* padding: 20px; */
     border-color: hotpink;
     border-width: 4px;
     border-style: solid;
-    /* flex: 1; */
 }
 
 
@@ -91,6 +151,8 @@ body {
         }
     }
 }
+
+/* Music Player */
 
 .music-player {
     color: white;
@@ -166,4 +228,28 @@ body {
 
 .mt {
     margin-top: auto;
+}
+
+/* Floating Player */
+
+#floating-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+#floating-player .card-wrapper {
+    padding: 15px;
+}
+
+#floating-player .music-player {
+    font-size: 0.9rem;
+}
+
+#floating-player .player-controls button {
+    padding: 8px 12px;
+    font-size: 14px;
 }
