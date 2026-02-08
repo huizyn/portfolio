@@ -78,3 +78,29 @@ function formatTime(seconds) {
 
 audio.volume = 0.7;
 loadSong(0);
+
+const floatingPlayer = document.getElementById('floating-player');
+const minimizeBtn = document.getElementById('minimize-btn');
+const playerContent = document.getElementById('player-content');
+
+function checkMobileAndMinimize() {
+    if (window.innerWidth <= 768) {
+        floatingPlayer.classList.add('minimized');
+        minimizeBtn.textContent = '+';
+    } else {
+        floatingPlayer.classList.remove('minimized');
+    }
+}
+
+minimizeBtn.addEventListener('click', () => {
+    floatingPlayer.classList.toggle('minimized');
+    if (floatingPlayer.classList.contains('minimized')) {
+        minimizeBtn.textContent = '+';
+    } else {
+        minimizeBtn.textContent = '−';
+    }
+});
+
+checkMobileAndMinimize();
+
+window.addEventListener('resize', checkMobileAndMinimize);

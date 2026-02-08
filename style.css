@@ -129,6 +129,22 @@ body {
     color: white;
     font-size: 1.2rem;
     padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.minimize-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 5px;
+    line-height: 1;
+    font-weight: bold;
+    display: none;
 }
 
 .card-wrapper {
@@ -230,6 +246,46 @@ body {
     margin-top: auto;
 }
 
+/* Footer */
+
+.footer {
+    background: black;
+    padding: 20px 0;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.footer-links > span:not(.separator) {
+    font-weight: 500;
+}
+
+.footer-links .separator {
+    color: #666;
+    margin: 0 8px;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
 /* Floating Player */
 
 #floating-player {
@@ -252,4 +308,165 @@ body {
 #floating-player .player-controls button {
     padding: 8px 12px;
     font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    /* Navbar Mobile */
+    .navbar-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    .navbar-right {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    .logo {
+        height: 25px;
+    }
+
+    /* Two Column Layout to Single Column */
+    .flex-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .left-col, .right-col, .left-col-2, .right-col-2 {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Typography */
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        font-size: 0.9rem;
+    }
+
+    .card-banner {
+        font-size: 1rem;
+    }
+
+    /* Images */
+    .profile-pic {
+        width: 100% !important;
+        max-width: 200px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .image-container {
+        justify-content: center;
+    }
+
+    .image-wrapper img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    /* Floating Music Player Mobile */
+    #floating-player {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+    }
+
+    #floating-player.minimized #player-content {
+        display: none;
+    }
+
+    .minimize-btn {
+        display: block !important;
+    }
+
+    #floating-player .card-wrapper {
+        padding: 10px;
+    }
+
+    #floating-player .music-player {
+        font-size: 0.8rem;
+    }
+
+    #floating-player .player-controls button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #floating-player .song-info {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+
+    .volume-control {
+        font-size: 0.85rem;
+    }
+
+    .time-display {
+        font-size: 0.8rem;
+    }
+
+    /* Footer Mobile */
+    .footer {
+        margin-top: 80px;
+    }
+
+    .footer-links {
+        font-size: 0.8rem;
+        line-height: 1.8;
+    }
+
+    .footer-links .separator {
+        margin: 0 4px;
+    }
+
+    .footer-copyright {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content img {
+        width: 30px !important;
+    }
+
+    .card-wrapper {
+        padding: 15px;
+    }
+
+    .image-wrapper img {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .footer-links span {
+        display: inline-block;
+    }
 }
