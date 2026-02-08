@@ -5,23 +5,20 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'monospace', monospace;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: url('images/background.jpg');
+    background-repeat: repeat;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 20px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
@@ -115,4 +112,135 @@ footer {
     .feature-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.content {
+    font-size: 1rem;
+    color: #f0f0f0;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left-col-2, .right-col-2 {
+    flex: 2;
+}
+
+.left-col, .right-col {
+    flex: 1;
+}
+
+.card {
+    background: transparent;
+    /* padding: 20px; */
+    border-color: hotpink;
+    border-width: 4px;
+    border-style: solid;
+    /* flex: 1; */
+}
+
+
+.card-banner {
+    background: hotpink;
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+.card-wrapper {
+    padding: 20px;
+    .about-me {
+        color: white;
+    }
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    .image-wrapper {
+        color: white;
+        text-align: center;
+        p {
+            margin-bottom: 4px;
+        }
+    }
+}
+
+.music-player {
+    color: white;
+}
+
+.song-info {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.player-controls button {
+    background: hotpink;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.player-controls button:hover {
+    background: #ff1493;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background: hotpink;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.1s;
+}
+
+.time-display {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-control input[type="range"] {
+    flex: 1;
+    cursor: pointer;
 }
