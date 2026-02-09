@@ -151,6 +151,9 @@ body {
     padding: 20px;
     .about-me {
         color: white;
+        img {
+            vertical-align: middle;
+        }
     }
 }
 
@@ -292,6 +295,190 @@ body {
 
 .mt {
     margin-top: auto;
+}
+
+/* Y2K Elements */
+
+.marquee-container {
+    background: linear-gradient(90deg, #ff1493, #ff69b4, #00ffff, #ff69b4, #ff1493);
+    background-size: 200% 100%;
+    animation: gradient-shift 3s linear infinite;
+    padding: 8px 0;
+    border: 2px solid hotpink;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255,105,180,0.5);
+}
+
+.marquee-container marquee {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: 0 0 5px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.visitor-counter {
+    background: rgba(0,0,0,0.733);
+    border: 2px solid hotpink;
+    padding: 8px 15px;
+    text-align: center;
+    color: white;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+    box-shadow: 0 0 8px rgba(255,105,180,0.4);
+    width: 100%;
+    img {
+        vertical-align: middle;
+    }
+}
+
+.counter-number {
+    color: hotpink;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255,105,180,0.8);
+}
+
+.mood-status {
+    margin-top: 8px !important;
+    font-size: 0.95rem;
+}
+
+.rainbow-text {
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #8b00ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow-scroll 3s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes rainbow-scroll {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.glitter-text {
+    color: hotpink;
+    font-weight: bold;
+    text-shadow: 
+        0 0 5px rgba(255,105,180,0.8),
+        0 0 10px rgba(255,105,180,0.6),
+        2px 2px 4px rgba(0,0,0,0.5);
+    animation: glitter 1.5s ease-in-out infinite;
+}
+
+@keyframes glitter {
+    0%, 100% { 
+        text-shadow: 
+            0 0 5px rgba(255,105,180,0.8),
+            0 0 10px rgba(255,105,180,0.6),
+            2px 2px 4px rgba(0,0,0,0.5);
+    }
+    50% { 
+        text-shadow: 
+            0 0 10px rgba(255,255,255,1),
+            0 0 20px rgba(255,105,180,1),
+            2px 2px 4px rgba(0,0,0,0.5);
+    }
+}
+
+.badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.web-badge {
+    image-rendering: pixelated;
+    border: 1px solid #666;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    max-width: 200px;
+}
+
+/* Comments Section */
+
+.comment {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,105,180,0.3);
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.comment:last-child {
+    margin-bottom: 0;
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.comment-avatar {
+    border-radius: 50%;
+    border: 2px solid hotpink;
+}
+
+.comment-header strong {
+    color: hotpink;
+    flex: 1;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.comment-body {
+    color: #f0f0f0;
+    margin-left: 50px;
+}
+
+.comment-body p {
+    margin: 0;
+}
+
+/* Photo Gallery */
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid hotpink;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.5);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+    display: block;
+}
+
+.photo-caption {
+    color: white;
+    text-align: center;
+    padding: 8px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+    font-size: 0.9rem;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(255,105,180,0.8);
 }
 
 /* Footer */
@@ -489,6 +676,40 @@ body {
 
     .footer-copyright {
         font-size: 0.75rem;
+    }
+
+    /* Y2K Elements Mobile */
+    .marquee-container marquee {
+        font-size: 0.85rem;
+    }
+
+    .visitor-counter {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .comment-body {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .comment-avatar {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .badges-container {
+        gap: 8px;
+    }
+
+    /* Photo Gallery Mobile */
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .gallery-item img {
+        height: 180px;
     }
 }
 
