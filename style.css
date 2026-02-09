@@ -311,29 +311,16 @@ body {
 
 .marquee-container marquee {
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 1rem;
-    text-shadow: 0 0 5px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.5);
+    img {
+        vertical-align: middle;
+    }
 }
 
 @keyframes gradient-shift {
     0% { background-position: 0% 50%; }
     100% { background-position: 200% 50%; }
-}
-
-.visitor-counter {
-    background: rgba(0,0,0,0.733);
-    border: 2px solid hotpink;
-    padding: 8px 15px;
-    text-align: center;
-    color: white;
-    font-family: 'Courier New', monospace;
-    display: inline-block;
-    box-shadow: 0 0 8px rgba(255,105,180,0.4);
-    width: 100%;
-    img {
-        vertical-align: middle;
-    }
 }
 
 .counter-number {
@@ -681,11 +668,6 @@ body {
     /* Y2K Elements Mobile */
     .marquee-container marquee {
         font-size: 0.85rem;
-    }
-
-    .visitor-counter {
-        font-size: 0.85rem;
-        padding: 6px 12px;
     }
 
     .comment-body {

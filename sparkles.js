@@ -90,4 +90,13 @@
         
         setTimeout(updateCounter, 500);
     }
+    
+    // Set last login date to today but in 2004
+    const lastLoginElement = document.getElementById('last-login');
+    if (lastLoginElement) {
+        const today = new Date();
+        const day = today.getDate().toString().padStart(2, '0');
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        lastLoginElement.textContent = `${day}/${month}/2004`;
+    }
 })();
