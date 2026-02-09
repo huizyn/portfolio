@@ -117,7 +117,7 @@ body {
 }
 
 .card {
-    background: transparent;
+    background: rgba(0, 0, 0, 0.733);
     border-color: hotpink;
     border-width: 4px;
     border-style: solid;
