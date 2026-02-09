@@ -42,7 +42,7 @@ audio.addEventListener('ended', () => {
     playBtn.textContent = '▶';
 });
 
-audio.volume = 0.7;
+audio.volume = 0.5;
 loadSong(0);
 
 const floatingPlayer = document.getElementById('floating-player');
