@@ -5,9 +5,7 @@ const progressContainer = document.querySelector('.progress-container');
 const songTitle = document.getElementById('song-title');
 
 const playlist = [
-    { title: 'Misery Business - Paramore', src: 'music/song1.mp3' },
-    { title: 'My Happy Ending - Avril Lavigne', src: 'music/song2.mp3' },
-    { title: 'In The End - Linkin Park', src: 'music/song3.mp3' }
+    { title: 'Misery Business - Paramore', src: 'music/song.mp3' },
 ];
 
 let currentSongIndex = 0;
@@ -38,12 +36,20 @@ progressContainer.addEventListener('click', (e) => {
     audio.currentTime = (clickX / width) * audio.duration;
 });
 
+audio.addEventListener('play', () => {
+    playBtn.textContent = '❚❚';
+})
+
 audio.addEventListener('ended', () => {
     playBtn.textContent = '▶';
 });
 
-audio.volume = 0.5;
+audio.volume = 0.4;
 loadSong(0);
+
+audio.autoplay = true;
+audio.loop = true;
+audio.play();
 
 const floatingPlayer = document.getElementById('floating-player');
 const minimizeBtn = document.getElementById('minimize-btn');

@@ -350,11 +350,11 @@ body {
 .glitter-text {
     color: hotpink;
     font-weight: bold;
-    text-shadow: 
+    /* text-shadow: 
         0 0 5px rgba(255,105,180,0.8),
         0 0 10px rgba(255,105,180,0.6),
         2px 2px 4px rgba(0,0,0,0.5);
-    animation: glitter 1.5s ease-in-out infinite;
+    animation: glitter 1.5s ease-in-out infinite; */
 }
 
 @keyframes glitter {
@@ -444,8 +444,6 @@ body {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border: 3px solid hotpink;
-    border-radius: 8px;
     background: rgba(0,0,0,0.5);
 }
 
