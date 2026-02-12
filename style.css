@@ -245,7 +245,7 @@ body {
     border: 2px solid #660044;
     border-radius: 4px;
     padding: 6px;
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     font-size: 0.75rem;
     color: #ff69b4;
     text-align: center;
@@ -419,14 +419,7 @@ body {
     font-weight: bold;
     font-size: 0.9rem;
     margin: 0 0 5px 0;
-    font-family: Arial, sans-serif;
-}
-
-.video-stats-2004 {
-    color: #666;
-    font-size: 0.75rem;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'monospace', monospace;
 }
 
 /* Comments Section */
